@@ -53,8 +53,8 @@ class BasePage():
         except:
             curtime = strftime('%Y%m%d%H%M%S')
             self.driver.save_screenshot(str(screenshot_path / f'{desc}{curtime}.png'))
-            # log.error(f'{desc}元素定位不到')
-            # log.error(traceback.format_exc())##记录堆栈信息
+            log.error(f'{desc}元素定位不到')
+            log.error(traceback.format_exc())##记录堆栈信息
 
     def get_elements(self,locator,desc=None):
         """
